@@ -56,7 +56,7 @@ function App() {
     users ->> Component 1
     users/home --> Component 2
     */}
-      <Route exact path="/about" element={<About />} />
+      <Route exact path="/about" element={<About mode={mode}/>} />
       <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyse" mode={mode} />} />
     </Routes> 
     </div>

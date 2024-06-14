@@ -12,10 +12,11 @@ export default function About(props) {
         color: 'black',
         backgroundColor: 'white'
       });
-    } else {
+    } 
+    else {
       setMyStyle({
         color: 'white',
-        backgroundColor: 'black',
+        backgroundColor: '#342a43',
         border: '1px solid white'
       });
     }
@@ -78,6 +79,7 @@ export default function About(props) {
           <div
             id="collapseTwo"
             className="accordion-collapse collapse"
+            style={myStyle}
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
