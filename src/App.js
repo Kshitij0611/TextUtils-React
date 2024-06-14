@@ -1,16 +1,15 @@
 import "./App.css";
 import Alert from "./components/Alert";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from 'react';
-
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
@@ -46,24 +45,23 @@ function App() {
     // React JSX Fragment ==> <> </>
     <>
     {/* <Navbar/> */}
-    {/* <Router> */}
+    <Router>
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} aboutText="About TextUtils" />
     <Alert alert={alert}/>
     
     <div className="container my-3">
     {/* my-3 is default bootstrap class which gives margin in y-direction of 3*/ }
-    {/* <Routes> */}
+    <Routes>
     {/* exact keyword is used to distinguish between->
     users ->> Component 1
     users/home --> Component 2
     */}
-    {/* <Route exact path="/about" element={<About />} /> */}
-    {/* <Route exact path="/" element={< */}
-    <TextForm showAlert={showAlert} heading="Enter the text to analyse" mode={mode} />
-    {/* } />
-    </Routes> */}
+      <Route exact path="/about" element={<About />} />
+      <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyse" mode={mode} />} />
+    </Routes> 
     </div>
-    {/* </Router> */}
+    
+    </Router>
     </>
   );
 }
