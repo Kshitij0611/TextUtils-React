@@ -45,10 +45,7 @@ export default function TextForm(props) {
   };
 
   const handleCopy = () => {
-    let text = document.getElementById('myBox');
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    // document.getSelection().removeAllRanges(); To remove selection part display
+    navigator.clipboard.writeText(text);
     props.showAlert("Copied to clipboard", "success");
   }
 
@@ -61,6 +58,7 @@ export default function TextForm(props) {
   const [text, setText] = useState('');
   // text = "new text"; // Wrong way to change the state
   // setText("Enter required text"); // Correct way to change the state
+
   return (
     <>
     <div className="container" style={{color: props.mode==='dark'?'white':'#042743'}}>
